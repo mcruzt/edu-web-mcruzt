@@ -1,0 +1,31 @@
+<mat-paginator [length]="length"
+               [pageSize]="pageSize"
+               (page)="pageEvent = loadData($event)"
+               [hidePageSize]="true">
+</mat-paginator>
+<main class="tab-content">
+  <mat-grid-list cols="3" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let item  of list">
+      <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar>
+            <mat-icon>place</mat-icon>
+          </div>
+          <mat-card-title >{{item.name}}</mat-card-title>
+          <mat-card-subtitle>
+            Tipo: <span class="text-white">{{item.type}}</span>
+            <br>
+            Dimensión: <span class="text-white">{{item.dimension}}</span>
+          <br>
+            <span (click)="openDetail(item.residents)" class="text-underline">Residentes</span>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <div class="pnl-img">
+          <img mat-card-image
+               src="https://s3-eu-west-3.amazonaws.com/web-magazines/entornos/deployment/visavis/wp-content/uploads/2020/05/22153120/series_adultos_movil.jpg"
+               alt="Lugar">
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</main>

@@ -1,0 +1,30 @@
+<mat-paginator [length]="length"
+               [pageSize]="pageSize"
+               (page)="pageEvent = loadData($event)"
+                [hidePageSize]="true">
+</mat-paginator>
+<main class="tab-content">
+  <mat-grid-list cols="3" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let item  of list">
+      <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar>
+            <mat-icon>face</mat-icon>
+          </div>
+          <mat-card-title (click)="openDetail(item.id)">
+            <span class="text-underline">{{item.name}}</span>
+          </mat-card-title>
+          <mat-card-subtitle>
+            Especie: <span class="text-white">{{item.species}}</span>
+            <br>
+            Estatus: <span class="text-white">{{item.status}}</span>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <div class="pnl-img">
+          <img mat-card-image [src]="item.image" alt="Personaje">
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</main>
+

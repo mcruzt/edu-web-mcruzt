@@ -1,0 +1,21 @@
+<h1>Personajes</h1>
+<mat-dialog-content style="background-color: #ededed;">
+  <mat-grid-list cols="3" rowHeight="300">
+    <mat-grid-tile *ngFor="let item  of list">
+      <mat-card class="card" style="width: 150px; height: 250px">
+        <mat-card-header>
+          <mat-card-title style="font-size: 18px" >
+            <span >{{item.name}}</span>
+          </mat-card-title>
+        </mat-card-header>
+        <div class="pnl-img">
+          <img class="img-small" mat-card-image   [src]="item.image" alt="Personaje">
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close color="primary">Cerrar</button>
+</mat-dialog-actions>
+

@@ -1,0 +1,82 @@
+html, body { height: 100%; }
+body { margin: 0; background-color: #ededed; }
+.main-container {
+  min-height:100%;
+  position:relative;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: #6cf;
+}
+.login-content{
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+}
+.login-card {
+  width: 350px;
+  margin: auto;
+  padding: 15px !important;
+}
+.tab-content {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+}
+.card {
+  min-width: 75%;
+  margin: auto;
+  padding: 15px !important;
+  text-align: left;
+}
+.card  .mat-card-header {
+  background-color: #607c8a;
+  color: #ededed;
+  padding: 15px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card .mat-card-content{
+  background-color: #607c8a;
+  color: #ededed;
+  padding: 15px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.card .mat-card-avatar{
+  text-align: center;
+}
+
+.card mat-icon{
+  font-size: 30px;
+  padding-top: 5px;
+}
+
+.text-underline{
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.text-white{
+  color: white;
+}
+
+.pnl-img{
+  width: 100%;
+  text-align: center;
+  background-color: #ededed;
+}
+
+.pnl-img img{
+  max-width: 300px;
+}
+
+.img-small {
+  width: 100px !important;
+  height: 120px;
+}
+
+

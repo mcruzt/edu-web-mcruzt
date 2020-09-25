@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "edu-web-mcruzt": {
+      "hosting": {
+        "edu-web-mcruzt": [
+          "edu-web-mcruzt"
+        ]
+      }
+    }
+  }
+}
