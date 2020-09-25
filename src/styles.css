@@ -38,7 +38,6 @@ body { margin: 0; background-color: #ededed; }
   padding: 15px;
   border-radius: 10px 10px 0px 0px;
 }
-
 .card .mat-card-content{
   background-color: #607c8a;
   color: #ededed;
