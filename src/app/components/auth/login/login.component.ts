@@ -37,7 +37,7 @@ export class LoginComponent {
   }
 
   login(value){
-    if (this.loginForm.isValid()){
+    if (this.loginForm.valid){
     this.authService.doLogin(value)
       .then(res => {
         this.router.navigate([environment.routeHome]);

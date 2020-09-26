@@ -40,7 +40,7 @@ export class RegisterComponent {
   }
 
   register(value){
-    if (this.registerForm.isValid()) {
+    if (this.registerForm.valid) {
       this.authService.doRegister(value)
         .then(res => {
           console.log(res);
