@@ -13,8 +13,6 @@ import {environment} from '../../../../environments/environment';
 export class RegisterComponent {
 
   registerForm;
-  errorMessage;
-  successMessage;
 
   constructor(
     public authService: AuthService,
@@ -42,24 +40,22 @@ export class RegisterComponent {
   }
 
   register(value){
-    this.authService.doRegister(value)
-      .then(res => {
-        console.log(res);
-        this.errorMessage = '';
-        this.successMessage = 'Your account has been created';
-        this.matSnackBar.open('Usuario creado correctamente', '', {
-          duration: 4000,
-          verticalPosition: 'top'
+    if (this.registerForm.isValid()) {
+      this.authService.doRegister(value)
+        .then(res => {
+          console.log(res);
+          this.matSnackBar.open('Usuario creado correctamente', '', {
+            duration: 4000,
+            verticalPosition: 'top'
+          });
+        }, err => {
+          this.matSnackBar.open(err.message, '', {
+            duration: 4000,
+            verticalPosition: 'top'
+          });
+          console.log(err);
         });
-      }, err => {
-        this.matSnackBar.open(err.message, '', {
-          duration: 4000,
-          verticalPosition: 'top'
-        });
-        console.log(err);
-        this.errorMessage = err.message;
-        this.successMessage = '';
-      });
+    }
   }
 
 }

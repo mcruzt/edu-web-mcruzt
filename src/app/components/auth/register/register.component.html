@@ -8,17 +8,16 @@
       <mat-form-field class="full-width-input">
         <input matInput placeholder="Email" formControlName="email" required>
         <mat-error>
-          Please provide a valid email address
+          Favor de ingresar el Email
         </mat-error>
       </mat-form-field>
       <mat-form-field class="full-width-input">
         <input matInput type="password" placeholder="Password" formControlName="password" required>
         <mat-error>
-          Please provide a valid password
+          Favor de ingresar la Contraseña
         </mat-error>
       </mat-form-field>
       <button mat-raised-button color="primary" (click)="register(registerForm.value)">Registro</button>
-      <button mat-raised-button color="danger" (click)="loginGoogle()">Registro con Google</button>
       <a mat-button href="/login">Login</a>
     </form>
   </mat-card-content>

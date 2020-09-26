@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node --optimize_for_size --max_old_space_size=460 server.js",
+    "start": "node server.js",
     "start-dev": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
+    "build-dev": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -55,11 +56,5 @@
     "inquirer": "^6.2.2",
     "inquirer-autocomplete-prompt": "^1.0.1",
     "open": "^7.0.3"
-  },
-  "engines": {
-    "node": "10.15.3",
-    "npm": "6.4.1"
   }
-
-
 }

@@ -10,13 +10,12 @@ import {CharacterComponent} from './character/character.component';
 import { DetailComponent as LocationDetailComponent } from './location/detail/detail.component';
 import { DetailComponent as EpisodeDetailComponent } from './episode/detail/detail.component';
 import { DetailComponent as CharacterDetailComponent } from './character/detail/detail.component';
-import {FooterComponent} from '../common/footer/footer.component';
 import {NavbarComponent} from '../common/navbar/navbar.component';
 
 
 @NgModule({
   declarations: [HomeComponent,
-    NavbarComponent, FooterComponent,
+    NavbarComponent,
     LocationComponent, EpisodeComponent, CharacterComponent,
     CharacterDetailComponent, EpisodeDetailComponent, LocationDetailComponent],
   imports: [

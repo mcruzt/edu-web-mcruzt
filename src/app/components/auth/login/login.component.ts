@@ -12,7 +12,6 @@ import {environment} from '../../../../environments/environment';
 })
 export class LoginComponent {
   loginForm;
-  errorMessage;
 
   constructor(
     public authService: AuthService,
@@ -38,6 +37,7 @@ export class LoginComponent {
   }
 
   login(value){
+    if (this.loginForm.isValid()){
     this.authService.doLogin(value)
       .then(res => {
         this.router.navigate([environment.routeHome]);
@@ -47,8 +47,9 @@ export class LoginComponent {
           verticalPosition: 'top'
         });
         console.log(err);
-        this.errorMessage = err.message;
       });
+
+    }
   }
 
 }
