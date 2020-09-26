@@ -13,6 +13,7 @@ import {RegisterComponent} from './components/auth/register/register.component';
 import {MaterialModule} from './material.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {HttpClientModule} from '@angular/common/http';
     AngularFirestoreModule,
     AngularFireAuthModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
